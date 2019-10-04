@@ -1,7 +1,7 @@
 FROM adoptopenjdk:8-jre-hotspot
 MAINTAINER LWB
 
-ENV MANIFOLDCF_VERSION 2.13
+ENV MANIFOLDCF_VERSION 2.14
 ENV CIFS_VERSION 2.1.2
 
 RUN apt-get update && \
