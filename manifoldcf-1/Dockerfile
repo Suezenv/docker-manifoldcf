@@ -1,4 +1,4 @@
-FROM openjdk:8-jre
+FROM adoptopenjdk:8-jre-hotspot
 MAINTAINER LWB
 
 ENV MANIFOLDCF_VERSION 1.10
@@ -8,7 +8,7 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes --no-install-recommends \
     wget curl ca-certificates \
     gzip && \
-  	rm -rf /var/lib/apt/lists/*
+		rm -rf /var/lib/apt/lists/*
 
 RUN wget http://apache.mirror.rafal.ca/manifoldcf/apache-manifoldcf-${MANIFOLDCF_VERSION}/apache-manifoldcf-${MANIFOLDCF_VERSION}-bin.tar.gz && \
     wget http://jcifs.samba.org/src/jcifs-${CIFS_VERSION}.jar && \
