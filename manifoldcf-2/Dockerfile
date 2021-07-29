@@ -38,5 +38,5 @@ EXPOSE 8345
 WORKDIR /usr/share/manifoldcf/example
 VOLUME /var/manifoldcf
 
-ENTRYPOINT ["java","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap"]
+ENTRYPOINT ["java","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-XX:MaxRAMFraction=1","-XshowSettings:vm"]
 CMD ["-jar", "start.jar"]
